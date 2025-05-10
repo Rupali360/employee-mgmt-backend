@@ -17,3 +17,8 @@ class Projects(models.Model):
     status = models.CharField(max_length=50)  # e.g., 'Ongoing', 'Completed'
     created_at = models.DateTimeField(auto_now_add=True)
     manager_id = models.IntegerField(default=None)
+
+class ActivitiesModel(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.CharField(default=None,max_length=255)
+
